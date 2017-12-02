@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical"
+        tools:context="com.example.apple.myapplication.ShoppingCartFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/tv_shopCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="购物车"
+            android:textSize="25sp"
+            android:textColor="#000000"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_shopCart_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="编辑  "
+            android:textColor="#7CCD7C"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#eeee"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#eee" />
+
+        <LinearLayout
+            android:id="@+id/ll_check_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/checkbox_all"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_center="true"
+                android:button="@null"
+                android:drawableLeft="@drawable/choosed"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:paddingLeft="0dp"
+                android:text="全选"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_center="true"
+                android:padding="10dp"
+                android:text="全选"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_center="true"
+                android:padding="10dp"
+                android:text="合计:"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/tv_shopCart_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_center="true"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="¥0.00"
+                android:textColor="#fec900"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_shopCart_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="#fec900"
+                android:text="结算"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>
